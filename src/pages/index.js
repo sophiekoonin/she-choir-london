@@ -4,8 +4,15 @@ import styles from './pages.module.scss'
 const IndexPage = () => (
   <div className={styles.container}>
     <div className={styles.hero}>
-      <h1>SHE Choir London</h1>
-      A vibrant, dynamic women's choir in the heart of London
+      <h1>
+        <span>SHE Choir London</span>
+      </h1>
+      <p>
+        <span>
+          A vibrant, dynamic women's&nbsp;pop&nbsp;choir in
+          the&nbsp;heart&nbsp;of&nbsp;London{' '}
+        </span>{' '}
+      </p>
     </div>
     <div className={styles.subHeading}>
       <h2>Blah blah blah blah</h2>
