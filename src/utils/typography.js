@@ -33,7 +33,7 @@ const theme = {
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     a: {
       color: '#fb251b',
-      textDecoration: 'none'
+      textDecoration: 'underline'
     },
     'a:hover,a:active': {
       color: options.bodyColor

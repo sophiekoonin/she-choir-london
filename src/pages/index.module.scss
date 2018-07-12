@@ -4,7 +4,7 @@
   grid-template-rows: auto;
   grid-template-areas: 'hero hero hero hero hero' 'main main main main main' 'footer footer footer footer footer';
   grid-row-gap: 20px;
-  row-gap: 5vh;
+  grid-column-gap: 30px;
 }
 
 .hero {
@@ -61,9 +61,14 @@
   }
 }
 
-.subHeading {
+.featureSubHeading {
   grid-area: 'main';
+  vertical-align: top;
   grid-column: 2 / span 1;
+  h2 {
+    text-align: right;
+    margin: 0;
+  }
 }
 .content {
   grid-area: 'main';
