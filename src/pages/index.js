@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './pages.module.css'
+import styles from './pages.module.scss'
 
 const IndexPage = () => (
   <div className={styles.container}>
