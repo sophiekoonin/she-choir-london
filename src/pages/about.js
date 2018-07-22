@@ -7,4 +7,4 @@ const AboutPage = () => (
   </div>
 )
 
-export default AboutPage
+export default AboutPage;
