@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import { logo } from './logo'
 import styles from './header.module.scss'
 import Menu from './menu'
+import Navbar from './navbar'
 
 const Header = ({ siteTitle }) => (
   <div className={styles.container}>
@@ -14,6 +15,7 @@ const Header = ({ siteTitle }) => (
     </Link>
 
     <Menu />
+    <Navbar />
   </div>
 )
 

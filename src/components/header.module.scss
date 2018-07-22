@@ -26,6 +26,18 @@
 }
 
 .menu {
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navbar {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
   display: inline-block;
   font-family: 'Raleway', sans-serif;
 

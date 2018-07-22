@@ -14,8 +14,15 @@
 
 h2 {
   vertical-align: top;
-  h2 {
-    margin: 0;
+  margin: 0;
+}
+
+.textBackground {
+  @media screen and (min-width: 900px) {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.1rem;
+    box-shadow: 0.5rem 0 0 rgba(255, 255, 255, 0.2),
+      -0.5rem 0 0 rgba(255, 255, 255, 0.2);
   }
 }
 

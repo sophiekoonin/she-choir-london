@@ -12,8 +12,8 @@ const getFormattedContent = pageContent =>
       : splitContent[1]
     return (
       <div key={idx} className={common.content}>
-        <h2
-          //   className={common.featureSubHeadingLeft}
+        <div
+          className={styles.subHeading}
           dangerouslySetInnerHTML={{ __html: trimmedHeading }}
         />
         <div
@@ -32,11 +32,9 @@ export default ({ data, pathContext, transition }) => {
   return (
     <div className={common.container}>
       <div className={styles.pageHeader}>
-        <h1
-          dangerouslySetInnerHTML={{
-            __html: `<span>${data.wordpressPage.title}</span>`
-          }}
-        />
+        <h1>
+          <span className={common.textBackground}>About SHE Choir London</span>
+        </h1>
       </div>
       {getFormattedContent(pageContent)}
       <div className={styles.secondRowPhoto} />

@@ -25,8 +25,9 @@ const theme = {
   ],
   headerFontFamily: ['Raleway', 'sans-serif'],
   bodyFontFamily: ['Merriweather', 'serif'],
-  headerColor: '#282828',
-  bodyColor: '#282828',
+  headerColor: '#3f3f3f',
+
+  bodyColor: '#3f3f3f',
   headerWeight: 600,
   bodyWeight: 400,
   boldWeight: 700,
@@ -43,7 +44,7 @@ const theme = {
     },
     blockquote: {
       ...scale(1 / 5),
-      color: '#282828',
+      color: '#3f3f3f',
       paddingLeft: rhythm(18 / 16),
       marginLeft: 0,
       borderLeft: `${rhythm(6 / 16)} solid`,

@@ -40,13 +40,14 @@
     max-width: 80%;
     line-height: 160%;
     text-align: right;
-    font-size: 3.5vw;
     padding-right: 0.5rem;
+    font-size: 5vw;
   }
 
   @media (min-width: 900px) {
     height: 50vh;
     p {
+      font-size: 3.5vw;
       max-width: 50%;
     }
   }

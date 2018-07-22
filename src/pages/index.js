@@ -4,31 +4,32 @@ import Link from 'gatsby-link'
 import styles from './index.module.scss'
 import common from '../components/common.module.scss'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div className={common.container}>
     <div className={styles.hero}>
       <h1>
-        <span>SHE Choir London</span>
+        <span className={common.textBackground}>SHE Choir London</span>
       </h1>
       <p>
-        <span>
+        <span className={common.textBackground}>
           A vibrant, dynamic women's&nbsp;pop&nbsp;choir in
           the&nbsp;heart&nbsp;of&nbsp;London{' '}
         </span>{' '}
       </p>
     </div>
-    <div className={common.featureSubHeadingLeft}>
-      <h2>Interesting sub heading goes here.</h2>
-    </div>
-    <div className={common.contentRightAligned}>
-      Veniam consequat nulla officia eiusmod cillum. Reprehenderit nostrud
-      cillum voluptate cillum eiusmod voluptate fugiat aute minim do. Voluptate
-      cillum mollit qui ullamco nisi exercitation occaecat. Quis nulla cillum
-      reprehenderit anim eiusmod adipisicing commodo voluptate pariatur
-      incididunt id enim. Qui velit id nisi ea exercitation ea esse do ex
-      eiusmod cillum consequat ex. <Link to="/about">Find out more -></Link>
-    </div>
+    <div
+      className={common.contentRightAligned}
+      dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }}
+    />
   </div>
 )
+
+export const query = graphql`
+  query Homepage {
+    wordpressPage(slug: { eq: "homepage" }) {
+      content
+    }
+  }
+`
 
 export default IndexPage
