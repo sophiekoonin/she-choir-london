@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
   grid-template-rows: repeat(auto-fit, auto);
-  grid-row-gap: 3rem;
+  grid-row-gap: 2rem;
   grid-column-gap: 30px;
   width: 100%;
   grid-auto-flow: row;
@@ -29,6 +29,12 @@
   grid-column-gap: 30px;
   width: 100%;
 
+  // &:nth-child(odd) {
+  //   // background: rgba(0, 0, 0, 0.1);
+  //   border: 1px solid #000;
+  //   padding: 50px;
+  // }
+
   .contentLeftAligned {
     grid-column: 1 / span 2;
   }
@@ -38,6 +44,9 @@
   }
 
   .featureSubHeadingLeft {
+    padding: 2rem;
+    text-align: center;
+    vertical-align: center;
     @extend %featureSubHeadingLeft;
     grid-column: 1 / span 1;
   }

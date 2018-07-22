@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './page.module.scss'
+import styles from '../components/page.module.scss'
 import common from '../components/common.module.scss'
 
 const getFormattedContent = pageContent =>
@@ -11,13 +11,12 @@ const getFormattedContent = pageContent =>
       ? splitContent[1].slice(6)
       : splitContent[1]
     return (
-      <div key={idx} className={common.subContainer}>
-        <div
-          className={common.featureSubHeadingLeft}
+      <div key={idx} className={common.content}>
+        <h2
+          //   className={common.featureSubHeadingLeft}
           dangerouslySetInnerHTML={{ __html: trimmedHeading }}
         />
         <div
-          className={common.contentRightAligned}
           dangerouslySetInnerHTML={{
             __html: trimmedContent
           }}
@@ -40,16 +39,14 @@ export default ({ data, pathContext, transition }) => {
         />
       </div>
       {getFormattedContent(pageContent)}
-      <div className={styles.aboutPhoto}>
-        <h3>TESTING</h3>
-      </div>
+      <div className={styles.secondRowPhoto} />
     </div>
   )
 }
 
 export const pageQuery = graphql`
-  query PageByPath($id: String!) {
-    wordpressPage(id: { eq: $id }) {
+  query AboutPage {
+    wordpressPage(slug: { eq: "who-we-are" }) {
       id
       title
       slug
