@@ -3,7 +3,7 @@ import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const theme = {
   title: 'SHE Choir',
-  baseFontSize: '18px',
+  baseFontSize: '16px',
   baseLineHeight: 1.5625,
   googleFonts: [
     {
@@ -15,16 +15,16 @@ const theme = {
       styles: ['400, 600']
     },
     {
-      name: 'Source Serif Pro',
-      styles: ['600']
+      name: 'Merriweather',
+      styles: ['400']
     },
     {
       name: 'Source Sans Pro',
       styles: ['400', '400i', '700']
     }
   ],
-  headerFontFamily: ['Source Serif Pro', 'sans-serif'],
-  bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
+  headerFontFamily: ['Raleway', 'sans-serif'],
+  bodyFontFamily: ['Merriweather', 'serif'],
   headerColor: 'hsla(0,0%,0%,1)',
   bodyColor: 'hsla(0,0%,0%,0.8)',
   headerWeight: 600,

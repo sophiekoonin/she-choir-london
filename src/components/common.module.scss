@@ -1,0 +1,74 @@
+.container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: repeat(auto-fit, auto);
+  grid-row-gap: 3rem;
+  grid-column-gap: 30px;
+  width: 100%;
+  grid-auto-flow: row;
+}
+
+%featureSubHeading {
+  vertical-align: top;
+  h2 {
+    margin: 0;
+  }
+}
+
+%featureSubHeadingLeft {
+  @extend %featureSubHeading;
+  h2 {
+    text-align: right;
+  }
+}
+
+.subContainer {
+  grid-column: 2 / span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  width: 100%;
+
+  .contentLeftAligned {
+    grid-column: 1 / span 2;
+  }
+
+  .contentRightAligned {
+    grid-column: 2 / span 2;
+  }
+
+  .featureSubHeadingLeft {
+    @extend %featureSubHeadingLeft;
+    grid-column: 1 / span 1;
+  }
+
+  .featureSubHeadingRight {
+    @extend %featureSubHeading;
+    grid-column: 3 / span 1;
+  }
+}
+.content {
+  grid-column: 2 / span 3;
+}
+
+.contentLeftAligned {
+  grid-column: 2 / span 2;
+}
+
+.contentRightAligned {
+  grid-column: 3 / span 2;
+}
+
+.featureSubHeadingLeft {
+  @extend %featureSubHeadingLeft;
+  grid-column: 2 / span 1;
+}
+
+.featureSubHeadingRight {
+  @extend %featureSubHeading;
+  grid-column: 4 / span 1;
+}
+
+.section {
+  margin-bottom: 5rem;
+}

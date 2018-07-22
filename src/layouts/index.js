@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import styles from './layout.module.scss'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -14,13 +15,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        paddingTop: 0
-      }}
-    >
-      {children()}
-    </div>
+    <div className={styles.container}>{children()}</div>
   </div>
 )
 
