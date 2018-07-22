@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
       </div>
     </Link>
 
-    <div>Menu</div>
+    <Menu />
   </div>
 )
 

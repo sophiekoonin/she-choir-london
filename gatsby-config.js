@@ -10,6 +10,15 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography.js`
       }
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `shechoir.com/london`,
+        protocol: `https`,
+        hostingWPCOM: false,
+        useACF: true,
+      }
     }
   ]
 }

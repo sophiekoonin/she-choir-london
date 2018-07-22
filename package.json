@@ -9,6 +9,7 @@
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "1.0.26",
     "gatsby-plugin-typography": "1.7.19",
+    "gatsby-source-wordpress": "2.0.93",
     "react-helmet": "^5.2.0",
     "typography-breakpoint-constants": "0.15.10"
   },

@@ -3,8 +3,9 @@ import styles from './logo.module.scss'
 
 export const logo = (
   <svg
-    width="10%"
-    height="10%"
+    width="100px"
+    height="100px"
+    fill="none"
     viewBox="0 0 360 360"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

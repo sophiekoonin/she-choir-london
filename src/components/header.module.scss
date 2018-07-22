@@ -19,6 +19,26 @@
   font-family: 'Raleway Dots', sans-serif;
   text-transform: uppercase;
   svg {
-    margin-right: 1rem;
+    margin-right: 0.7rem;
+    width: 15%;
+    height: 15%;
+  }
+}
+
+.menu {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+
+  ul {
+    list-style-type: none;
+    li {
+      margin-right: 1rem;
+      float: left;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      // &:first-of-type {
+      //   margin-left: 0;
+      // }
+    }
   }
 }
