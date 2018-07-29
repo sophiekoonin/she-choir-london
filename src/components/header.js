@@ -4,32 +4,6 @@ import { logo } from './logo'
 import MenuIcon from './menu'
 import Navbar from './navbar'
 
-const menuLinks = [
-  {
-    to: '/about',
-    name: 'About'
-  },
-  {
-    to: '/gigs',
-    name: 'Gigs'
-  },
-  {
-    to: '/blog',
-    name: 'Blog'
-  },
-  {
-    to: '/join',
-    name: 'Join'
-  },
-  {
-    to: '/book',
-    name: 'Book'
-  },
-  {
-    to: '/contact',
-    name: 'Contact'
-  }
-]
 class Header extends Component {
   constructor(props) {
     super(props)
@@ -42,18 +16,26 @@ class Header extends Component {
     e.preventDefault()
     this.setState(prevState => ({ menuIsVisible: !prevState.menuIsVisible }))
   }
-  render = () => (
-    <header className="header__container">
-      <Link to="/">
-        <div className="header__logo-container">
-          {logo}
-          {this.props.siteTitle}
-        </div>
-      </Link>
+  render = () => {
+    const { menuIsVisible } = this.state
+    const navbarClass = menuIsVisible ? 'navbar navbar__visible' : 'navbar'
+    return (
+      <header className="header__container">
+        <Link to="/">
+          <div className="header__logo-container">
+            {logo}
+            {this.props.siteTitle}
+          </div>
+        </Link>
 
-      <MenuIcon onClick={this.toggleMobileMenu} />
-      <Navbar links={menuLinks} />
-    </header>
-  )
+        <MenuIcon onClick={this.toggleMobileMenu} />
+        <Navbar
+          className={navbarClass}
+          onClose={this.toggleMobileMenu}
+          mobileIsOpen={menuIsVisible}
+        />
+      </header>
+    )
+  }
 }
 export default Header
