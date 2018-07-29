@@ -1,10 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import styles from './header.module.scss'
-
 const Navbar = () => (
-  <nav className={styles.navbar}>
+  <nav className="navbar">
     <ul>
       <li>
         <Link to="/about">About</Link>

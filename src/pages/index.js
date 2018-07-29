@@ -1,24 +1,21 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import styles from './index.module.scss'
-import common from '../components/common.module.scss'
-
 const IndexPage = ({ data }) => (
-  <div className={common.container}>
-    <div className={styles.hero}>
+  <div className="common__container">
+    <div className="index__hero">
       <h1>
-        <span className={common.textBackground}>SHE Choir London</span>
+        <span className="common__hero-text__background">SHE Choir London</span>
       </h1>
       <p>
-        <span className={common.textBackground}>
+        <span className="common__hero-text__background">
           A vibrant, dynamic women's&nbsp;pop&nbsp;choir in
           the&nbsp;heart&nbsp;of&nbsp;London{' '}
         </span>{' '}
       </p>
     </div>
     <div
-      className={common.contentRightAligned}
+      className="common__content--right-aligned"
       dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }}
     />
   </div>

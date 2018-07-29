@@ -1,8 +1,5 @@
 import React from 'react'
 
-import styles from '../components/page.module.scss'
-import common from '../components/common.module.scss'
-
 const getFormattedContent = pageContent =>
   pageContent.map((section, idx) => {
     const splitContent = section.split('<!-- body -->')
@@ -11,11 +8,8 @@ const getFormattedContent = pageContent =>
       ? splitContent[1].slice(6)
       : splitContent[1]
     return (
-      <div key={idx} className={common.content}>
-        <div
-          className={styles.subHeading}
-          dangerouslySetInnerHTML={{ __html: trimmedHeading }}
-        />
+      <div key={idx} className="common__content">
+        <div dangerouslySetInnerHTML={{ __html: trimmedHeading }} />
         <div
           dangerouslySetInnerHTML={{
             __html: trimmedContent
@@ -30,14 +24,16 @@ export default ({ data, pathContext, transition }) => {
   const pageContent = data.wordpressPage.content.split('<!--- section --->')
   console.log({ pageContent })
   return (
-    <div className={common.container}>
-      <div className={styles.pageHeader}>
+    <div className="common__container">
+      <div className="page__header">
         <h1>
-          <span className={common.textBackground}>About SHE Choir London</span>
+          <span className="common__hero-text__background">
+            About SHE Choir London
+          </span>
         </h1>
       </div>
       {getFormattedContent(pageContent)}
-      <div className={styles.secondRowPhoto} />
+      <div className="page__second-row__photo" />
     </div>
   )
 }

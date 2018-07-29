@@ -1,8 +1,5 @@
 import React from 'react'
 
-import styles from './page.module.scss'
-import common from '../components/common.module.scss'
-
 const getFormattedContent = pageContent =>
   pageContent.map((section, idx) => {
     const splitContent = section.split('<!-- body -->')
@@ -11,13 +8,13 @@ const getFormattedContent = pageContent =>
       ? splitContent[1].slice(6)
       : splitContent[1]
     return (
-      <div key={idx} className={common.subContainer}>
+      <div key={idx}>
         <div
-          className={common.featureSubHeadingLeft}
+          className="common__feature__subheading--left"
           dangerouslySetInnerHTML={{ __html: trimmedHeading }}
         />
         <div
-          className={common.contentRightAligned}
+          className="common__content--right-aligned"
           dangerouslySetInnerHTML={{
             __html: trimmedContent
           }}
@@ -33,8 +30,8 @@ export default ({ data, pathContext, transition }) => {
       ? data.wordpressPage.content
       : getFormattedContent(pageContent)
   return (
-    <div className={common.container}>
-      <div className={styles.pageHeader}>
+    <div className="common__container">
+      <div className="page__header">
         <h1
           dangerouslySetInnerHTML={{
             __html: `<span>${data.wordpressPage.title}</span>`
@@ -42,7 +39,7 @@ export default ({ data, pathContext, transition }) => {
         />
       </div>
       {formattedContent}
-      <div className={styles.aboutPhoto}>
+      <div className="page__second-row__photo">
         <h3>TESTING</h3>
       </div>
     </div>

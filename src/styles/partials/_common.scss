@@ -1,0 +1,61 @@
+%logoBase {
+  fill: none;
+  stroke: #f5685c;
+}
+
+%content {
+  grid-column: 2 / span 3;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5 rem;
+    padding: 1rem 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    @media (min-width: 900px) {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+.common {
+  &__container {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-rows: repeat(auto-fit, auto);
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+    width: 100%;
+    grid-auto-flow: row;
+
+    @media screen and (min-width: 900px) {
+      grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    }
+  }
+
+  h2 {
+    vertical-align: top;
+    margin: 0;
+  }
+
+  &__hero-text__background {
+    @media screen and (min-width: 900px) {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.1rem;
+      box-shadow: 0.5rem 0 0 rgba(255, 255, 255, 0.2),
+        -0.5rem 0 0 rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__content,
+  &__content--left-aligned,
+  &__content--right-aligned,
+  &__feature__subheading--left,
+  &__feature__subheading--right {
+    @extend %content;
+  }
+
+  &__left {
+    text-align: right;
+  }
+}

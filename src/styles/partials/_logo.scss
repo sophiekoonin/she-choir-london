@@ -1,0 +1,37 @@
+%logoBase {
+  fill: none;
+  stroke: #f5685c;
+}
+
+.logo {
+  &__svg {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.5;
+  }
+
+  &__circle {
+    @extend %logoBase;
+    stroke-width: 8px;
+  }
+
+  &__main-text {
+    @extend %logoBase;
+    stroke-width: 7.5px;
+  }
+
+  &__h-loop {
+    @extend %logoBase;
+    stroke-width: 7px;
+    stroke-linecap: butt;
+  }
+
+  &__line {
+    @extend %logoBase;
+    stroke-width: 6px;
+    stroke-linecap: butt;
+    stroke-linejoin: bevel;
+  }
+}

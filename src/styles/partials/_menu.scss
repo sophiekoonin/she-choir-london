@@ -1,0 +1,8 @@
+.menu {
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+}
