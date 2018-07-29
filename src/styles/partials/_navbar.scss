@@ -1,17 +1,27 @@
 .navbar {
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
-  display: inline-block;
-  font-family: 'Raleway', sans-serif;
+  @media screen and (min-width: 900px) {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
 
-  ul {
-    list-style-type: none;
-    li {
-      margin-right: 1rem;
-      float: left;
-      margin-bottom: 0;
-      text-transform: uppercase;
+    ul {
+      list-style-type: none;
+      li {
+        margin-right: 1rem;
+        float: left;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
     }
+  }
+  position: absolute;
+  top: 0;
+  right: -33vw;
+  background: #fff;
+  z-index: 10;
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+  &__visible {
+    transform: translateX(-100%);
   }
 }
