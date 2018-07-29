@@ -27,9 +27,11 @@ const getFormattedContent = pageContent =>
   })
 
 export default ({ data, pathContext, transition }) => {
-  console.log(data)
-  const pageContent = data.wordpressPage.content.split('<!--- section --->')
-  console.log({ pageContent })
+  let pageContent = data.wordpressPage.content.split('<!--- section --->')
+  const formattedContent =
+    pageContent.length === 1
+      ? data.wordpressPage.content
+      : getFormattedContent(pageContent)
   return (
     <div className={common.container}>
       <div className={styles.pageHeader}>
@@ -39,7 +41,7 @@ export default ({ data, pathContext, transition }) => {
           }}
         />
       </div>
-      {getFormattedContent(pageContent)}
+      {formattedContent}
       <div className={styles.aboutPhoto}>
         <h3>TESTING</h3>
       </div>
