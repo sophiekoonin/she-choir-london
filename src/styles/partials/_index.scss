@@ -2,7 +2,7 @@
   &__hero {
     grid-row: 1 / span 1;
     width: 100%;
-    height: 33vh;
+    height: 100vh;
     font-family: 'Raleway', sans-serif;
     background: linear-gradient(
         347deg,
@@ -24,6 +24,8 @@
       text-transform: uppercase;
       color: #fff;
       padding: 0;
+      font-weight: 400;
+      font-size: 5rem;
     }
 
     h1 span {
@@ -46,7 +48,7 @@
     }
 
     @media (min-width: 900px) {
-      height: 50vh;
+      height: 100vh;
       p {
         font-size: 3.5vw;
         max-width: 50%;

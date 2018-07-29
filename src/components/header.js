@@ -5,7 +5,7 @@ import Menu from './menu'
 import Navbar from './navbar'
 
 const Header = ({ siteTitle }) => (
-  <div className="header__container">
+  <header className="header__container">
     <Link to="/">
       <div className="header__logo-container">
         {logo}
@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
 
     <Menu />
     <Navbar />
-  </div>
+  </header>
 )
 
 export default Header

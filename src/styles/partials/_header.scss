@@ -1,17 +1,19 @@
-.header {
-  &__container {
-    background: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
-    a {
-      text-decoration: none;
-      color: hsla(0, 0%, 0%, 0.9);
-    }
+header {
+  background: none;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+  a {
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 0.9);
   }
 
-  &__logo-container {
+  .header__logo-container {
     display: flex;
     align-items: center;
     margin: 0 auto;
