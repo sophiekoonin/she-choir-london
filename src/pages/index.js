@@ -4,14 +4,10 @@ import Link from 'gatsby-link'
 const IndexPage = ({ data }) => (
   <div className="common__container">
     <div className="index__hero">
-      <h1>
-        <span className="common__hero-text__background">SHE Choir London</span>
-      </h1>
+      <h1>SHE Choir London</h1>
       <p>
-        <span className="common__hero-text__background">
-          A vibrant, dynamic women's&nbsp;pop&nbsp;choir in
-          the&nbsp;heart&nbsp;of&nbsp;London{' '}
-        </span>{' '}
+        A vibrant, dynamic women's&nbsp;pop&nbsp;choir in
+        the&nbsp;heart&nbsp;of&nbsp;London
       </p>
     </div>
     <div

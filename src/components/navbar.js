@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 
 const Overlay = ({ onClose }) => (
   <div className="navbar__overlay" onClick={onClose} />
 )
 const Navbar = ({ className, mobileIsOpen, onClose }) => (
-  <div>
+  <Fragment>
     <nav className={className}>
       <ul>
         <li>
@@ -29,7 +29,7 @@ const Navbar = ({ className, mobileIsOpen, onClose }) => (
       </ul>
     </nav>
     {mobileIsOpen && <Overlay onClose={onClose} />}
-  </div>
+  </Fragment>
 )
 
 export default Navbar
