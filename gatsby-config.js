@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-react-next',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -17,7 +18,7 @@ module.exports = {
         baseUrl: `shechoir.com/london`,
         protocol: `https`,
         hostingWPCOM: false,
-        useACF: true,
+        useACF: true
       }
     }
   ]
