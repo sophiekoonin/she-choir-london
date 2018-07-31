@@ -4,8 +4,6 @@
 }
 
 %content {
-  grid-column: 2 / span 3;
-
   h2 {
     margin-top: 0;
     margin-bottom: 1.5 rem;
@@ -30,14 +28,15 @@
 .common {
   &__container {
     display: grid;
-    grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-rows: repeat(auto-fit, auto);
     grid-row-gap: 2rem;
-    grid-column-gap: 30px;
     width: 100%;
     grid-auto-flow: row;
 
     @media screen and (min-width: 900px) {
+      grid-column-gap: 30px;
+
       grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     }
   }
@@ -47,21 +46,20 @@
     margin: 0;
   }
 
-  &__hero-text__background {
-    @media screen and (min-width: 900px) {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 0.1rem;
-      box-shadow: 0.5rem 0 0 rgba(255, 255, 255, 0.2),
-        -0.5rem 0 0 rgba(255, 255, 255, 0.2);
-    }
-  }
-
   &__content,
   &__content--left-aligned,
   &__content--right-aligned,
   &__feature__subheading--left,
   &__feature__subheading--right {
     @extend %content;
+  }
+
+  &__content--full-width {
+    @extend %content;
+    grid-column: 2 / span 1;
+    @media screen and (min-width: 900px) {
+      grid-column: 2 / span 3;
+    }
   }
 
   &__left {

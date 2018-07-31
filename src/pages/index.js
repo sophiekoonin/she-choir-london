@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => (
       </p>
     </div>
     <div
-      className="common__content--right-aligned"
+      className="common__content--full-width"
       dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }}
     />
   </div>

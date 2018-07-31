@@ -10,6 +10,7 @@
     );
     grid-column: 1 / span 5;
     grid-area: 'hero';
+    margin-top: 55px;
 
     @media (min-width: 900px) {
       height: 35vh;
@@ -19,6 +20,9 @@
 
       h1 {
         font-size: 3.5vw;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
       }
 
       margin-bottom: 1rem;
