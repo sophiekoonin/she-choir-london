@@ -82,4 +82,20 @@
     width: 100%;
     height: 100%;
   }
+
+  &__social {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+
+    li {
+      border-bottom: 0 !important;
+      float: left;
+    }
+    svg {
+      float: left;
+      width: 2 * $double-spacer;
+      height: 2 * $double-spacer;
+    }
+  }
 }
