@@ -1,16 +1,44 @@
 .navbar {
+  font-family: 'Raleway', sans-serif;
+
   @media screen and (min-width: 900px) {
+    height: auto;
     position: relative;
     display: inline-block;
-    font-family: 'Raleway', sans-serif;
     transform: none;
     transition: none;
     width: auto;
   }
 
+  &__close-button {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    svg {
+      stroke: $black;
+      stroke-linecap: round;
+      stroke-width: 5;
+    }
+  }
+
+  button {
+    padding: 0;
+    background: none;
+    border: 0;
+    width: 3 * $base-spacer;
+    height: 3 * $base-spacer;
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
+    height: 100vh;
+
+    @media screen and (min-width: 900px) {
+      height: auto;
+    }
+
     li {
       font-size: 1.5rem;
       padding: 0.5rem 0;
@@ -24,7 +52,8 @@
         border-bottom: 0;
         padding: 0;
       }
-      &:last-of-type {
+      &:first-of-type,
+      :last-of-type {
         border-bottom: none;
       }
     }

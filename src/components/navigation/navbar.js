@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
+import CloseIcon from '../icons/close'
 
 const Overlay = ({ onClose }) => (
   <div className="navbar__overlay" onClick={onClose} />
@@ -8,6 +9,13 @@ const Navbar = ({ className, mobileIsOpen, onClose }) => (
   <Fragment>
     <nav className={className}>
       <ul>
+        {mobileIsOpen && (
+          <li className="navbar__close-button">
+            <button onClick={onClose}>
+              <CloseIcon />
+            </button>
+          </li>
+        )}
         <li>
           <Link to="/about">About</Link>
         </li>

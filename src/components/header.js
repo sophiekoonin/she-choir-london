@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import { logo } from './logo'
-import MenuIcon from './menu'
-import Navbar from './navbar'
+import { logo } from './icons/logo'
+import MenuIcon from './navigation/menu'
+import Navbar from './navigation/navbar'
 
 class Header extends Component {
   constructor(props) {
@@ -12,10 +12,21 @@ class Header extends Component {
     }
   }
 
+  openMenu = () => {
+    document.getElementById('main').classList.add('no-scroll')
+    this.setState({ menuIsVisible: true })
+  }
+
+  closeMenu = () => {
+    document.getElementById('main').classList.remove('no-scroll')
+    this.setState({ menuIsVisible: false })
+  }
+
   toggleMobileMenu = e => {
     e.preventDefault()
-    this.setState(prevState => ({ menuIsVisible: !prevState.menuIsVisible }))
+    this.state.menuIsVisible ? this.closeMenu() : this.openMenu()
   }
+
   render = () => {
     const { menuIsVisible } = this.state
     const navbarClass = menuIsVisible ? 'navbar navbar__visible' : 'navbar'
