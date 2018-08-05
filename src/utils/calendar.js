@@ -3,9 +3,9 @@ const calendarUrl = `https://www.googleapis.com/calendar/v3/calendars/${GCAL_ID}
 
 export const getEvents = async () => {
   const response = await fetch(calendarUrl)
-  const items = response.body && response.body.items
+  const { items } = await response.json()
   return items
-    ? response.body.items.map(event => ({
+    ? items.map(event => ({
         start: event.start.date || event.start.dateTime,
         end: event.end.date || event.end.dateTime,
         title: event.summary,

@@ -30,6 +30,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "jest-fetch-mock": "1.6.5",
     "prettier": "^1.12.0"
   },
   "repository": {
@@ -37,6 +38,10 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./test/jest-setup.js"
+    ],
     "testURL": "http://localhost/",
     "testPathIgnorePatterns": [
       "/node_modules/",
