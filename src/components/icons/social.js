@@ -40,9 +40,9 @@ export const instagram = (
   <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="ig-gradient">
-        <stop offset="0%" stop-color="#f8ed34" />
-        <stop offset="50%" stop-color="#EA118D" />
-        <stop offset="100%" stop-color="#2e368f" />
+        <stop offset="0%" stopColor="#f8ed34" />
+        <stop offset="50%" stopColor="#EA118D" />
+        <stop offset="100%" stop-Color="#2e368f" />
       </linearGradient>
     </defs>
     <path
