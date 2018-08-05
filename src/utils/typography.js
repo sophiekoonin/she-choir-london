@@ -11,20 +11,16 @@ const theme = {
       styles: ['400']
     },
     {
-      name: 'Raleway',
-      styles: ['400, 600']
-    },
-    {
-      name: 'Merriweather',
+      name: 'Rubik',
       styles: ['400']
     },
     {
-      name: 'Source Sans Pro',
-      styles: ['400', '400i', '700']
+      name: 'Raleway',
+      styles: ['400, 600']
     }
   ],
-  headerFontFamily: ['Raleway', 'sans-serif'],
-  bodyFontFamily: ['Merriweather', 'serif'],
+  headerFontFamily: ['Raleway', 'serif'],
+  bodyFontFamily: ['Rubik', 'sans-serif'],
   headerColor: '#3f3f3f',
 
   bodyColor: '#3f3f3f',
