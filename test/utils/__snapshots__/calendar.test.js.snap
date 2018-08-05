@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calendar should map the response items into a slimmed-down array of events 1`] = `
+Array [
+  Object {
+    "end": "2016-01-12T19:30:00Z",
+    "location": "West Covina, California",
+    "start": "2016-01-12T18:30:00Z",
+    "title": "Super exciting event name",
+  },
+  Object {
+    "end": "2016-03-13T19:30:00Z",
+    "location": "Mordor",
+    "start": "2016-03-13T18:30:00Z",
+    "title": "Another event",
+  },
+  Object {
+    "end": "2016-05-14T19:30:00Z",
+    "location": "Alderaan",
+    "start": "2016-05-14T18:30:00Z",
+    "title": "Something else",
+  },
+]
+`;
