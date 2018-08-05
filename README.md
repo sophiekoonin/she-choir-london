@@ -21,4 +21,4 @@ cd she-choir
 gatsby develop
 ```
 
-You'll need an `.env` file in the project root directory with the environment variables `GCAL_API_KEY` and `GCAL_ID` for Google Calendar for the calendar to work locally.
+You'll need an `.env.development` file in the project root directory with the environment variables `GCAL_API_KEY` and `GCAL_ID` for Google Calendar for the calendar to work locally.
