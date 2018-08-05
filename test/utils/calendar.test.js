@@ -99,4 +99,16 @@ describe('calendar', () => {
     const events = await getEvents()
     expect(events).toMatchSnapshot()
   })
+
+  it('should return an empty array if the fetch fails', async () => {
+    jest.resetAllMocks()
+    global.fetch = jest
+      .fn()
+      .mockImplementation(() =>
+        Promise.resolve({ error: 'something went wrong' })
+      )
+    const events = await getEvents()
+
+    expect(events).toEqual([])
+  })
 })
