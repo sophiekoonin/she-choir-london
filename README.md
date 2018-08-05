@@ -1,26 +1,24 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# SHE Choir London
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+In-progress redesign of the SHE Choir London website (https://www.shechoir.com/london) by Sophie Koonin.
 
-## Install
+## Stack
 
+- Wordpress as a headless CMS (why? because it's easier to use for the non-techies out there, and it's free)
+- Node + React frontend built using Gatsby and hosted on Netlify (tbc)
+
+## Getting to work
 Make sure that you have the Gatsby CLI program installed:
+
 ```sh
 npm install --global gatsby-cli
 ```
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
-
 Then you can run it by:
+
 ```sh
-cd gatsby-example-site
+cd she-choir
 gatsby develop
 ```
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+You'll need an `.env` file in the project root directory with the environment variables `GCAL_API_KEY` and `GCAL_ID` for Google Calendar for the calendar to work locally.
