@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
+  padding-top: $double-spacer;
   ul {
     list-style-type: none;
     li {
