@@ -42,7 +42,7 @@ export const instagram = (
       <linearGradient id="ig-gradient">
         <stop offset="0%" stopColor="#f8ed34" />
         <stop offset="50%" stopColor="#EA118D" />
-        <stop offset="100%" stop-Color="#2e368f" />
+        <stop offset="100%" stopColor="#2e368f" />
       </linearGradient>
     </defs>
     <path
